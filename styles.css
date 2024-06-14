@@ -236,6 +236,14 @@ header nav .logo {
     margin-right: 10px;
 }
 
+#cont-call a, #cont-gmail a, #cont-git a, #cont-whatsapp a,#cont-linked a, #cont-insta a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #cont-call::before {
     content: '';
     position: absolute;
