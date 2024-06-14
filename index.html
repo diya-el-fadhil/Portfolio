@@ -25,11 +25,11 @@
             </button>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Certificates</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#project-section">Projects</a></li>
+                <li><a href="#exp-section">Experience</a></li>
+                <li><a href="#cert-section">Certificates</a></li>
+                <li><a href="#cont-section">Contact</a></li>
             </ul>
         </div>
         <header>
@@ -41,11 +41,11 @@
                         </div>
                         <div class="links">
                             <a href="#">Home</a>
-                            <a href="#">About</a>
-                            <a href="#">Projects</a>
-                            <a href="#">Experience</a>
-                            <a href="#">Certificates</a>
-                            <a href="#">Contact</a>
+                            <a href="#about-section">About</a>
+                            <a href="#project-section">Projects</a>
+                            <a href="#exp-section">Experience</a>
+                            <a href="#cert-section">Certificates</a>
+                            <a href="#cont-section">Contact</a>
                         </div>
                     </div>
                     <div class="right center flex between">
@@ -66,7 +66,7 @@
             </div>
             </header>
         
-            <section class="sec">
+            <section class="sec" id="about-section">
                 <div class="container flex center between">
                 <div class="flex center between">
                     <div class="left flex j-center">
@@ -105,7 +105,7 @@
                             Editing
                         </span><br>
                         <span class="about-text3">
-                            50+ hours Completed
+                            47+ hours Completed
                         </span>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                 </div>
             </section>
         
-            <section class="sec">
+            <section class="sec" id="project-section">
                 <div class="container flex center between">
                 <div class="flex center between">
                     <div class="left flex j-center">
@@ -209,7 +209,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sec">
+            <section class="sec" id="exp-section">
                 <div class="container flex center between">
                 <div class="flex center between">
                     <div class="left flex j-center">
@@ -281,7 +281,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sec">
+            <section class="sec" id="cert-section">
                 <div class="container flex center between">
                 <div class="flex center between">
                     <div class="left flex j-center">
@@ -300,10 +300,10 @@
                 </div>
                 <div class="container flex center between">
                     <div class="work-left flex1 flex center j-center">
-                            <img src="./assets/images/Work1.png" class="work-img"><br>
+                            <img src="./assets/images/Codedex html_page-0001.jpg" class="work-img"><br>
                     </div>
                     <div class="work-right flex1 flex center j-center">
-                            <img src="./assets/images/Work1.png" class="work-img"><br>
+                            <img src="./assets/images/Codedex css_page-0001.jpg" class="work-img"><br>
                     </div>
                 </div>
                 <div class="container flex center between">
@@ -328,10 +328,10 @@
                 <br>
                 <div class="container flex center between">
                     <div class="work-left flex1 flex center j-center">
-                            <img src="./assets/images/Work1.png" class="work-img"><br>
+                            <img src="./assets/images/Codedex Javascript_page-0001.jpg" class="work-img"><br>
                     </div>
                     <div class="work-right flex1 flex center j-center">
-                            <img src="./assets/images/Work1.png" class="work-img"><br>
+                            <img src="./assets/images/Generative A I.png" class="work-img"><br>
                     </div>
                 </div>
                 <div class="container flex center between">
@@ -356,10 +356,10 @@
                 <br>
                 <div class="container flex center between">
                     <div class="work-left flex1 flex center j-center">
-                            <img src="./assets/images/Work1.png" class="work-img"><br>
+                            <img src="./assets/images/LLM.png" class="work-img"><br>
                     </div>
                     <div class="work-right flex1 flex center j-center">
-                            <img src="./assets/images/Work1.png" class="work-img"><br>
+                            <img src="./assets/images/Introduction to Responsible AI.png" class="work-img"><br>
                     </div>
                 </div>
                 <div class="container flex center between">
@@ -381,7 +381,7 @@
                     </div>
                 </div>
             </section>
-            <section class="sec-bottom">
+            <section class="sec-bottom" id="cont-section">
                 <div class="container flex center between">
                 <div class="flex center between">
                     <div class="left flex j-center">
@@ -464,6 +464,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(type, newTextDelay + 250);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all links with hashes
+    const links = document.querySelectorAll('a[href*="#"]');
+
+    for (const link of links) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+});
+
 
 </script>
 <footer>
