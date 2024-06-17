@@ -419,6 +419,10 @@ header nav .logo {
     padding-bottom: 20px;
 }
 
+.work-text-link {
+    text-decoration: none;
+}
+
 footer {
     background-color: #333;
     color: #fff;
